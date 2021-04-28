@@ -1,35 +1,54 @@
 <script>
-  import "bulma/css/bulma.css";
-
   export let name;
 </script>
 
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap"
+    rel="stylesheet"
+  />
+</svelte:head>
+
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+  <h1>Defeat your loan</h1>
+  <h2>Pay off your loans early and save money</h2>
+
+  <form class="mt-1">
+    <label for="amount">Initial Loaned Amount</label>
+    <div class="dollars">
+      <input
+        type="text"
+        placeholder="Loan Amount"
+        id="amount"
+        autocomplete="off"
+      />
+    </div>
+    <label for="rate">Interest Rate</label>
+    <div class="rate">
+      <input
+        type="text"
+        placeholder="Interest Rate"
+        id="rate"
+        autocomplete="off"
+      />
+    </div>
+    <label for="rate">Term</label>
+    <div class="row">
+      <div class="column">
+        <input
+          type="text"
+          placeholder="Months/Years"
+          id="term"
+          autocomplete="off"
+        />
+      </div>
+      <div class="column column-25">
+        <select id="term-unit" autocomplete="off">
+          <option>Years</option>
+          <option>Months</option>
+        </select>
+      </div>
+    </div>
+  </form>
 </main>
-
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-</style>

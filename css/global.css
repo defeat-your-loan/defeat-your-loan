@@ -1,0 +1,119 @@
+@import 'milligram/dist/milligram.css';
+
+/* https://coolors.co/26cf78-0892a5-1f2d33-e8e9ee-f15152 */
+:root {
+  --primary: #0892a5;
+  --positive: #26cf78;
+  --negative: #0892a5;
+  --bg: #1f2d33;
+  --text: #e8e9ee;
+  --placeholder: #999;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background-color: var(--bg);
+  color: var(--text);
+
+  height: 100vw;
+  width: 100vw;
+  overflow: hidden;
+
+  padding: 6rem 1rem;
+}
+
+.button {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+input[type] {
+  font-size: 2rem;
+  color: var(--text);
+
+  &:focus {
+    border-color: var(--primary);
+  }
+
+  &::placeholder {
+    color: var(--placeholder);
+  }
+}
+
+select {
+  color: var(--text);
+
+  & option {
+    background-color: var(--bg);
+  }
+
+  &:focus {
+    border-color: var(--primary);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%2362929e" d="M0,0l6,8l6-8"/></svg>');
+  }
+}
+
+.mt-1 {
+  margin-top: 16px;
+}
+
+.mb-1 {
+  margin-bottom: 16px;
+}
+
+.my-1 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background-color: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.dollars {
+  display: flex;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '$';
+    left: 1rem;
+    top: 2px;
+    font-size: 2rem;
+  }
+
+  & > input {
+    padding-left: 2.5rem;
+  }
+}
+
+.rate {
+  display: flex;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '%';
+    right: 1rem;
+    top: 2px;
+    font-size: 2rem;
+  }
+
+  & > input {
+    padding-right: 2.5rem;
+  }
+}
