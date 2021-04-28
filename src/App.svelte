@@ -15,6 +15,15 @@
   <h2>Pay off your loans early and save money</h2>
 
   <form class="mt-1">
+    <label for="amount">Loan Start Date</label>
+    <div>
+      <input
+        type="date"
+        placeholder="Loan Start Date"
+        id="amount"
+        autocomplete="off"
+      />
+    </div>
     <label for="amount">Initial Loaned Amount</label>
     <div class="dollars">
       <input

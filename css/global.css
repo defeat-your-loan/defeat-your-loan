@@ -54,6 +54,10 @@ select {
   }
 }
 
+input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 .mt-1 {
   margin-top: 16px;
 }
