@@ -4,10 +4,18 @@
 :root {
   --primary: #0892a5;
   --positive: #26cf78;
-  --negative: #0892a5;
+  --negative: #f15152;
   --bg: #1f2d33;
   --text: #e8e9ee;
   --placeholder: #999;
+}
+
+.positive-text {
+  color: var(--positive);
+}
+
+.negative-text {
+  color: var(--negative);
 }
 
 body {
@@ -83,7 +91,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 800px;
+  max-width: 430px;
   height: 100vh;
   margin: 0 auto;
 }
@@ -120,4 +128,7 @@ main {
   & > input {
     padding-right: 2.5rem;
   }
+}
+
+.stats {
 }
