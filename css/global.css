@@ -24,11 +24,12 @@ body {
   background-color: var(--bg);
   color: var(--text);
 
-  height: 100vw;
-  width: 100vw;
-  overflow: hidden;
+  padding: 4rem 1rem;
+}
 
-  padding: 6rem 1rem;
+button {
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .button {
@@ -77,6 +78,19 @@ input::-webkit-calendar-picker-indicator {
 .my-1 {
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+.mt-2 {
+  margin-top: 32px;
+}
+
+.mb-2 {
+  margin-bottom: 32px;
+}
+
+.my-2 {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .card {
