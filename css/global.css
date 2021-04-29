@@ -31,6 +31,10 @@ form {
   width: 100%;
 }
 
+a {
+  color: var(--primary);
+}
+
 button {
   background-color: var(--primary);
   border-color: var(--primary);

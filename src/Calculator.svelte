@@ -1,3 +1,9 @@
+<style>
+  .reset {
+    text-align: right;
+  }
+</style>
+
 <script>
   import { loanStats, startMonth, amount, rate, term, termType, strategy } from './stores'
   import PayOffBy from './PayOffBy.svelte'
@@ -17,10 +23,24 @@
   function submit(e) {
     e.preventDefault()
   }
+
+  function reset(e) {
+    e.preventDefault()
+
+    startMonth.set('')
+    amount.set('')
+    rate.set('')
+    term.set('')
+    termType.set('Years')
+    strategy.set('')
+  }
 </script>
 
 <form on:submit={submit}>
   <fieldset>
+    <div class="reset">
+      <a href="/" on:click={reset}>Reset</a>
+    </div>
     <label for="startMonth">My loan started in</label>
     <div>
       <input

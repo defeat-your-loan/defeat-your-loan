@@ -11,7 +11,10 @@
 
 <main>
   <h1>Defeat your loan</h1>
-  <h2>Pay off your loans early<br /><strong>and save money</strong></h2>
+  <h2>
+    Pay off your loans early<br />
+    <strong>and save money</strong>
+  </h2>
 
   <Calculator />
 </main>
