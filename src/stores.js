@@ -5,7 +5,7 @@ export const startMonth = writable(localStorage.getItem('startMonth') || '')
 export const amount = writable(localStorage.getItem('amount') || '')
 export const rate = writable(localStorage.getItem('rate') || '')
 export const term = writable(localStorage.getItem('term') || '')
-export const termType = writable(localStorage.getItem('termType') || 'months')
+export const termType = writable(localStorage.getItem('termType') || 'Years')
 export const strategy = writable(localStorage.getItem('strategy') || '')
 export const payOffBy = writable(localStorage.getItem('payOffBy') || '')
 
