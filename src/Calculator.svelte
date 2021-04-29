@@ -77,7 +77,7 @@
           You will pay <strong>{formatter.format($loanStats.interestToPay)}</strong> more interest for
           the rest of the loan.
         </h3>
-        <!-- <h3>Total Interest: ${stats.interestTotal}</h3> -->
+        <h3>Principal Remaining: {formatter.format($loanStats.principalRemaining)}</h3>
       </div>
 
       <div class="mt-2">

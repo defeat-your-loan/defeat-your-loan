@@ -23,7 +23,6 @@ function interestInMonths({ startMonth, rate, amount, term }, payments) {
 
   for (let i = 0; i < payments; i++) {
     let interest = (balance * rate) / 12
-    console.log(interest)
     interestPaid += interest
     balance -= monthly - interest
   }
@@ -46,6 +45,12 @@ function interestToPay({ startMonth, rate, amount, term }) {
   )
 }
 
+function principalRemaining({ startMonth, rate, amount, term }) {
+  const months = monthsSince(startMonth)
+  const totalPaid = months * monthlyPayment({ rate, amount, term })
+  return amount - (totalPaid - interestPaid({ startMonth, rate, amount, term }))
+}
+
 function percentToDecimal(rate) {
   return rate / 100
 }
@@ -62,7 +67,6 @@ function monthlyPayment({ rate, amount: a, term: n }) {
 // TODO Money saved with diff payment
 
 function calculateLoanStats(data) {
-  console.log(data)
   if (data.startMonth && data.rate && data.amount && data.term && data.termType) {
     const loanData = {
       startMonth: data.startMonth,
@@ -76,8 +80,8 @@ function calculateLoanStats(data) {
       interestToPay: interestToPay(loanData),
       interestTotal: interestTotal(loanData),
       monthlyPayment: monthlyPayment(loanData),
+      principalRemaining: principalRemaining(loanData),
     }
-    console.log(loanData)
     return stats
   }
 }
