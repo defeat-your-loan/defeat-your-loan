@@ -61,7 +61,7 @@ function loanStats(data) {
     const loanData = {
       startMonth: data.startMonth,
       rate: percentToDecimal(Number(data.rate)),
-      amount: Number(data.amount),
+      amount: Number(data.amount.replace(/,/g, '')),
       term: Number(getTermInMonths(data.term, data.termType)),
     }
     console.log(loanData)
