@@ -1,7 +1,5 @@
 <script>
   import Calculator from './Calculator.svelte'
-
-  export let name
 </script>
 
 <svelte:head>

@@ -56,7 +56,8 @@ function monthlyPayment({ rate, amount: a, term: n }) {
   return a / ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)))
 }
 
-function loanStats(data) {
+function calculateLoanStats(data) {
+  console.log(data)
   if (data.startMonth && data.rate && data.amount && data.term && data.termType) {
     const loanData = {
       startMonth: data.startMonth,
@@ -64,7 +65,6 @@ function loanStats(data) {
       amount: Number(data.amount.replace(/,/g, '')),
       term: Number(getTermInMonths(data.term, data.termType)),
     }
-    console.log(loanData)
 
     const stats = {
       interestPaid: interestPaid(loanData),
@@ -77,4 +77,4 @@ function loanStats(data) {
   }
 }
 
-export { loanStats }
+export { calculateLoanStats }
