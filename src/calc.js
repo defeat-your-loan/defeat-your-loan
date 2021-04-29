@@ -61,7 +61,7 @@ function monthlyPayment({ rate, amount: a, term: n }) {
   return a / ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)))
 }
 
-// TODO Remaining balance
+// TODO Current loan payoff date
 // TODO Payment to payoff by
 // TODO Amortization data
 // TODO Money saved with diff payment

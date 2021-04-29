@@ -5,7 +5,7 @@
 </style>
 
 <script>
-  import { loanStats, startMonth, amount, rate, term, termType, strategy } from './stores'
+  import { loanStats, startMonth, amount, rate, term, termType, strategy, payOffBy } from './stores'
   import PayOffBy from './PayOffBy.svelte'
   import SaveMoney from './SaveMoney.svelte'
 
@@ -33,6 +33,7 @@
     term.set('')
     termType.set('Years')
     strategy.set('')
+    payOffBy.set('')
   }
 </script>
 
