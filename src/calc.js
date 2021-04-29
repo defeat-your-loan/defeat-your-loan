@@ -56,6 +56,11 @@ function monthlyPayment({ rate, amount: a, term: n }) {
   return a / ((Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n)))
 }
 
+// TODO Remaining balance
+// TODO Payment to payoff by
+// TODO Amortization data
+// TODO Money saved with diff payment
+
 function calculateLoanStats(data) {
   console.log(data)
   if (data.startMonth && data.rate && data.amount && data.term && data.termType) {
